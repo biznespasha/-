@@ -1,16 +1,24 @@
-class Apple:
-    def __init__(self, c, w, h, l):
-        self.color = c
-        self.weight = w
-        self.health = h
-        self.look = l
-app = Apple
-app.color = "green"
-app.weight = 7.5
-app.health = 100
-app.look = "good"
-print("создано")
-print(app.look)
-print((app.color))
-print(app.weight)
-print(app.health)
+class Stack:
+    def __init__(self):
+        self.items = []
+    def is_empty(self):
+        return self.items == []
+    def push(self, item):
+        return self.items.append(item)
+    def pop(self):
+        return self.items.pop()
+    def peek(self):
+        last = len(self.items)-1
+        return self.items[last]
+    def size(self):
+        return len(self.items)
+stack = Stack()
+number
+for c in number:
+    stack.push(c)
+
+reverse = number
+
+for i in range(len(stack.items)):
+    reverse += stack.pop()
+print(reverse)

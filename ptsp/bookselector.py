@@ -1,21 +1,22 @@
 from library import books
 def search():
     #search writer
-    writersearch = input("Введите автора")
-    if writersearch in books:
-        author = books[writersearch]
-        print("Такой автор есть")
-    else:
-        return "Такого автора нет"
-    booksearch = input("Введите книгу")
-    if booksearch not in author:
-        return  "Такой книги нет"
-    for i, show in enumerate(author):
-        if booksearch in author[i]:
-            print("Такая книга есть")
-            new = author[i]
-            author[i] = new
-        return show, writersearch
+    while True:
+        writersearch = input("Введите автора")
+        if writersearch in books:
+            author = writersearch
+            print("Такой автор есть")
+        else:
+            return "Такого автора нет"
+        booksearch = input("Введите книгу")
+        if booksearch not in author:
+            return  "Такой книги нет"
+        for i, show in enumerate(author):
+            if booksearch in author[i]:
+                print("Такая книга есть")
+                new = author[i]
+                author[i] = new
+            return show, writersearch
 print(search())
 from library import books
 def add():
